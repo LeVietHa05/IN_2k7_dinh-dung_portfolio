@@ -19,9 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserratSans.className} antialiased`}>
-        <Nav/>
-        {children}
+      <body
+        className={`${montserratSans.className} antialiased min-h-screen bg-no-repeat bg-cover`}>
+        <Nav />
+        <div className="m-auto w-[1440px] pb-[120px]">{children}</div>
       </body>
     </html>
   );

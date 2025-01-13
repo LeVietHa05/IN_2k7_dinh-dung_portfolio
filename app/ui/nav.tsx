@@ -14,7 +14,7 @@ export default function Nav() {
   const pathname = usePathname();
   if (!pathname) return null;
   return (
-    <div className=" fixed left-0 top-0 z-20 w-[640px] h-[72px] bg-amber-50 font-medium text-lg text-gray-500 rounded-br-[20px]">
+    <div className="shadow-lg fixed left-0 top-0 z-20 w-[640px] h-[72px] bg-amber-50 font-medium text-lg text-gray-500 rounded-br-[20px]">
       <div className="flex justify-around text-base leading-9 pt-1">
         {navItems.map((item) => {
           return (
