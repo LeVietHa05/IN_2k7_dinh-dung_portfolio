@@ -7,7 +7,7 @@ const navItems = [
   { name: "About me", path: "/" },
   { name: "Gallery", path: "/gallery" },
   { name: "Publications", path: "/publics" },
-  { name: "Personal project", path: "/project" },
+  { name: "Personal project", path: "/myprojects" },
 ];
 
 export default function Nav() {
