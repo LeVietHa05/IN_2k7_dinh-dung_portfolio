@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Nav from "./ui/nav";
+import Footer from "./ui/footer";
 import "./globals.css";
 
 const montserratSans = Montserrat({
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${montserratSans.className} antialiased min-h-screen bg-no-repeat bg-cover`}>
         <Nav />
         <div className="m-auto w-[1440px] pb-[120px]">{children}</div>
+        <Footer/>
       </body>
     </html>
   );
