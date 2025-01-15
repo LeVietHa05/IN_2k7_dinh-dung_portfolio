@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        Transparentwhite30: "rgba(243, 243, 243, 0.3)",
+        Transparentwhite60: "rgba(243, 243, 243, 0.6)",
       },
     },
   },

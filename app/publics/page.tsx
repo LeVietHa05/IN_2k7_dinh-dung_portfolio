@@ -2,6 +2,7 @@
 
 import BookPage from "../ui/bookpage";
 import Image from "next/image";
+import Overlaymagazine from "../ui/overlayMagazine";
 const bookPages = [
   //   {
   //     front: { link: "/publics/cover-front.png", isCover: true },
@@ -34,6 +35,37 @@ const bookPages = [
   {
     front: { link: "/publics/13.png", isCover: false },
     back: null,
+  },
+];
+
+const magazines = [
+  {
+    alt: "magazine 1",
+    width: 248,
+    height: 350,
+    overlayText: "“Da Pho” - Magazine 2022",
+    src: "/publics/magazine1.png",
+  },
+  {
+    alt: "magazine 2",
+    width: 355,
+    height: 350,
+    overlayText: "“Hoa Van” - Publication Summer 2024",
+    src: "/publics/magazine2.png",
+  },
+  {
+    alt: "magazine 3",
+    width: 248,
+    height: 350,
+    overlayText: "“Mong Anh” - Magazine 2023",
+    src: "/publics/magazine3.png",
+  },
+  {
+    alt: "magazine 4",
+    width: 355,
+    height: 350,
+    overlayText: "“Ha Mien” - Publication Summer 2023",
+    src: "/publics/magazine4.png",
   },
 ];
 
@@ -91,6 +123,20 @@ export default function Publics() {
       </div>
       <div className="p-2 border-b-2 border-amber-600 text-amber-800 text-2xl font-semibold">
         FLSS Magazine
+      </div>
+      <div className="flex justify-evenly my-10">
+        {magazines.map((magazine) => {
+          return (
+            <Overlaymagazine
+              key={magazine.alt}
+              alt={magazine.alt}
+              height={magazine.height}
+              width={magazine.width}
+              overlayText={magazine.overlayText}
+              src={magazine.src}
+            />
+          );
+        })}
       </div>
     </div>
   );
