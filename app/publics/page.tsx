@@ -3,6 +3,7 @@
 import BookPage from "../ui/bookpage";
 import Image from "next/image";
 import Overlaymagazine from "../ui/overlayMagazine";
+import Link from "next/link";
 const bookPages = [
   //   {
   //     front: { link: "/publics/cover-front.png", isCover: true },
@@ -45,6 +46,8 @@ const magazines = [
     height: 350,
     overlayText: "“Da Pho” - Magazine 2022",
     src: "/publics/magazine1.png",
+    downloadLink:
+      "https://drive.usercontent.google.com/download?id=1IYGAjY7zZ0zSeZLQJSHJYYiBEJNlgAMb",
   },
   {
     alt: "magazine 2",
@@ -52,6 +55,8 @@ const magazines = [
     height: 350,
     overlayText: "“Hoa Van” - Publication Summer 2024",
     src: "/publics/magazine2.png",
+    downloadLink:
+      "https://drive.usercontent.google.com/download?id=1-Uls2d3jQOwXnlzFutI8UmoPxOMfb3Hl",
   },
   {
     alt: "magazine 3",
@@ -59,6 +64,8 @@ const magazines = [
     height: 350,
     overlayText: "“Mong Anh” - Magazine 2023",
     src: "/publics/magazine3.png",
+    downloadLink:
+      "https://drive.usercontent.google.com/download?id=1Qcn01HckTorPgYPseRmINewe7ZodJ8aC",
   },
   {
     alt: "magazine 4",
@@ -66,6 +73,8 @@ const magazines = [
     height: 350,
     overlayText: "“Ha Mien” - Publication Summer 2023",
     src: "/publics/magazine4.png",
+    downloadLink:
+      "https://drive.usercontent.google.com/download?id=1ptyJrZeltNRAaEZK9gMpXZ9clA_TqcCB",
   },
 ];
 
@@ -127,14 +136,15 @@ export default function Publics() {
       <div className="flex justify-evenly my-10">
         {magazines.map((magazine) => {
           return (
-            <Overlaymagazine
-              key={magazine.alt}
-              alt={magazine.alt}
-              height={magazine.height}
-              width={magazine.width}
-              overlayText={magazine.overlayText}
-              src={magazine.src}
-            />
+            <Link key={magazine.alt} href={magazine.downloadLink}>
+              <Overlaymagazine
+                alt={magazine.alt}
+                height={magazine.height}
+                width={magazine.width}
+                overlayText={magazine.overlayText}
+                src={magazine.src}
+              />
+            </Link>
           );
         })}
       </div>
